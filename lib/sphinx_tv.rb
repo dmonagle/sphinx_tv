@@ -7,9 +7,9 @@ require "modules/sphinx_module"
 require "sphinx_tv/download"
 require "sphinx_tv/cpan"
 require "erb"
+require "version"
 
 class SphinxTv
-  VERSION = "1.0.0"
   SUDO_PROMPT = "-p \"#{"Your administrator password is required to peform this step: ".yellow}\""
   CONFIG_DIRECTORY = File.join(Etc.getpwuid.dir, ".sphinx_tv")
   MODULES = ["MySQL", "MythTv", "Shepherd"]

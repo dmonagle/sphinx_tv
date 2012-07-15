@@ -17,4 +17,7 @@ Gem::Specification.new do |gem|
   gem.version       = SphinxTv::VERSION
   gem.homepage    =
     'http://sphinxtv.intrica.com.au'
+  gem.add_dependency 'colorize'
+  gem.add_dependency 'highline'
+  gem.add_dependency 'nokogiri'
 end
