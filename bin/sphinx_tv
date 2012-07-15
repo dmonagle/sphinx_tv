@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'sphinx_tv'
+
+s = SphinxTv.new
+s.run

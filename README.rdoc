@@ -1,0 +1,54 @@
+= SphinxTV
+
+The purpose of this gem is to provide an installer/configurator to ease the setup of a Mac Mini as a media server.
+MythTV is the primary focus for this installer (MythTV + Big Cat in the OS makes for the Sphinx name.) Included in the
+modules is Shepherd, an Australian TV grabber which integrates well with MythTV and allows for a great free TV guide
+on the MythTV side of things.
+
+At this point SphinxTV is regarded to be in extreme Alpha. It is on Github in the interests of the people that are
+alpha testing it for me. I intend to continue to develop and expand on this as time allows (this is a hobby project
+for me at this point.)
+
+The goal is to have a website up and running in the coming months that will help detail the setup of a very functional
+home entertainment system using Mac Mini hardware.
+
+== Gem Installation ==
+
+Easy:
+
+    gem install sphinx_tv
+
+== Using SphinxTV ==
+
+=== Setup ===
+
+    sphinx_tv setup
+
+Turn on the modules that you wish to install and configure.
+
+=== Download ===
+
+    sphinx_tv download
+
+Option step but will just do all the necessary downloading for the modules that have been configured in the setup stage.
+
+=== Installation ===
+
+    sphinx_tv install
+
+This runs through the install of each module. If the download wasn't run seperately, then the downloads will be done
+on-demand at ths start of the module install.
+
+=== Configuration ===
+
+    sphinx_tv configure
+
+Post installation configuration.
+
+== Modules ==
+
+=== MySQL ===
+
+=== MythTV ===
+
+=== Shepherd ===
