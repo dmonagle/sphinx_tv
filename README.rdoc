@@ -20,10 +20,12 @@ Easy:
 
 == Using SphinxTV
 
-=== Setup
+=== Prerequisites
 
 You must have the Xcode command line tools installed to use SphinxTV. Xcode is freely available on the Mac App Store.
 The command line tools can be installed from the preferences in Xcode under the downloads tab.
+
+=== Setup
 
     sphinx_tv setup
 
