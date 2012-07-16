@@ -12,43 +12,46 @@ for me at this point.)
 The goal is to have a website up and running in the coming months that will help detail the setup of a very functional
 home entertainment system using Mac Mini hardware.
 
-== Gem Installation ==
+== Gem Installation
 
 Easy:
 
     gem install sphinx_tv
 
-== Using SphinxTV ==
+== Using SphinxTV
 
-=== Setup ===
+=== Setup
+
+You must have the Xcode command line tools installed to use SphinxTV. Xcode is freely available on the Mac App Store.
+The command line tools can be installed from the preferences in Xcode under the downloads tab.
 
     sphinx_tv setup
 
 Turn on the modules that you wish to install and configure.
 
-=== Download ===
+=== Download
 
     sphinx_tv download
 
 Option step but will just do all the necessary downloading for the modules that have been configured in the setup stage.
 
-=== Installation ===
+=== Installation
 
     sphinx_tv install
 
 This runs through the install of each module. If the download wasn't run seperately, then the downloads will be done
 on-demand at ths start of the module install.
 
-=== Configuration ===
+=== Configuration
 
     sphinx_tv configure
 
 Post installation configuration.
 
-== Modules ==
+== Modules
 
-=== MySQL ===
+=== MySQL
 
-=== MythTV ===
+=== MythTV
 
-=== Shepherd ===
+=== Shepherd
