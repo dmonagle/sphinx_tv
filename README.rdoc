@@ -16,7 +16,7 @@ home entertainment system using Mac Mini hardware.
 
 Easy:
 
-    gem install sphinx_tv
+    sudo gem install sphinx_tv
 
 == Using SphinxTV
 
