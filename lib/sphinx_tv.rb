@@ -89,7 +89,6 @@ class SphinxTv
   end
 
   def save_configuration
-    Dir.mkdir(CONFIG_DIRECTORY) unless File.exists? CONFIG_DIRECTORY
     File.open(File.join(CONFIG_DIRECTORY, "sphinx.yml"), "w") do |file|
       file.write @config.to_yaml
     end
@@ -184,6 +183,7 @@ class SphinxTv
   end
 
   def run
+    Dir.mkdir(CONFIG_DIRECTORY) unless File.exists? CONFIG_DIRECTORY
     @no_config = load_configuration
 
     action = nil
