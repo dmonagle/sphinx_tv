@@ -1,7 +1,5 @@
 module Download
   def self.url file_url, filename
-    Dir::mkdir("cache") unless FileTest::directory?("cache")
-
     z_option = (File.exists?(filename) ? " -z #{filename}" : "")
     result = %x[curl -L -w "%{http_code} %{url_effective}"#{z_option} -o #{filename}.download #{file_url}]
     if /304/.match(result)

@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'colorize'
   gem.add_dependency 'highline'
   gem.add_dependency 'nokogiri'
+  gem.add_dependency 'version'
 end

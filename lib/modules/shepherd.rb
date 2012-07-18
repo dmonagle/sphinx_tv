@@ -84,7 +84,7 @@ class Shepherd < SphinxModule
     %x[tar -jxf #{SphinxTv::download_path("xmltv.tar.bz2")} -C #{SphinxTv::cache_path}]
     puts "Compiling XMLTV...".cyan
     commands = Array.new.tap do |c|
-      c << "cd #{Sphinx.cache_path}/xmltv*"
+      c << "cd #{SphinxTv::cache_path}/xmltv*"
       c << "perl Makefile.PL"
       c << "make"
       c << "make test"
