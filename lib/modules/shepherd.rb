@@ -23,6 +23,27 @@ class Shepherd < SphinxModule
     result
   end
 
+  def configure
+    shepherd = File.join(Etc.getpwuid.dir, ".shepherd", "shepherd")
+    shepherd_download = SphinxTv::download_path("shepherd")
+    exit = false
+    until exit do
+      choose do |menu|
+        menu.header = "\nShepherd Configuration".cyan
+        menu.prompt = "Select an option: "
+        if File.exists? shepherd
+          menu.choice("Setup database") { system("perl #{shepherd} --configure") }
+        elsif File.exists? shepherd_download
+          puts "Running shepherd for the first time...".cyan
+          system("perl #{shepherd_download} --configure")
+        end
+        menu.choice("Done") {
+          exit = true
+        }
+      end
+    end
+  end
+
   def download
     doc = Nokogiri::HTML(open('http://sourceforge.net/projects/xmltv/files/xmltv/0.5.63/'))
 
@@ -55,8 +76,6 @@ class Shepherd < SphinxModule
         home_dir = Etc.getpwuid.dir
         %x[sudo #{SphinxTv::SUDO_PROMPT} ln -s #{home_dir}/.shepherd/references/Shepherd /Library/Perl/5.12]
       end
-      puts "Installing Shepherd".cyan
-      system("perl #{SphinxTv::download_path("shepherd")} --configure")
     end
   end
 
