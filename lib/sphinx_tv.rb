@@ -35,7 +35,7 @@ class SphinxTv
 
   def initialize
     @config = {
-        :version => VERSION,
+        :version => SphinxTv::VERSION,
         :modules => MODULE_DEFAULTS
     }
   end

@@ -32,10 +32,9 @@ class Shepherd < SphinxModule
         menu.header = "\nShepherd Configuration".cyan
         menu.prompt = "Select an option: "
         if File.exists? shepherd
-          menu.choice("Setup database") { system("perl #{shepherd} --configure") }
+          menu.choice("Configure Shepherd") { system("perl #{shepherd} --configure") }
         elsif File.exists? shepherd_download
-          puts "Running shepherd for the first time...".cyan
-          system("perl #{shepherd_download} --configure")
+          menu.choice("Install and Configure Shepherd") { system("perl #{shepherd_download} --configure") }
         end
         menu.choice("Done") {
           exit = true
