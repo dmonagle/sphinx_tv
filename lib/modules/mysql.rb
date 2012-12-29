@@ -42,7 +42,7 @@ class MySQL < SphinxModule
   end
 
   def download
-    url = "http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.25a-osx10.6-x86_64.dmg"
+    url = "http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.29-osx10.6-x86_64.dmg"
     puts "Downloading MySQL".cyan
     puts url
     result = Download.url(url, SphinxTv::download_path("mysql.dmg"))
